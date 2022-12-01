@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Little Samba - Quincas Moreira.mp3-ae076405ffa661ad3b1b544e5e274978.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Little Samba - Quincas Moreira.mp3"
+dest_files=[ "res://.import/Little Samba - Quincas Moreira.mp3-ae076405ffa661ad3b1b544e5e274978.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

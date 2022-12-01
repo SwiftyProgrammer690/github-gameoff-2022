@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Fonts/PressStart2P-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Sprites/space3.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/IronGain.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/ResourcePage1.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 42
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 46
+font_data = ExtResource( 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 509, 297 )
+scale = Vector2( 1.094, 1.288 )
+texture = ExtResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color( 0.858824, 0.654902, 0.0196078, 1 )
+margin_left = 41.0
+margin_top = 63.0
+margin_right = 998.0
+margin_bottom = 117.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "You Collected This Much Iron In Battle"
+fit_content_height = true
+
+[node name="IronGain" type="Label" parent="."]
+margin_left = 347.0
+margin_top = 157.0
+margin_right = 641.0
+margin_bottom = 199.0
+custom_fonts/font = SubResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 0.835294, 0.231373, 0.231373, 1 )
+margin_left = 211.0
+margin_top = 324.0
+margin_right = 812.0
+margin_bottom = 506.0
+custom_fonts/font = SubResource( 3 )
+text = "Go Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
